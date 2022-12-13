@@ -1,4 +1,4 @@
-repoPath: PIP/pipe-task-hello-world
+repoPath: jayeshmjfrog/broadcom
 mainBranch: main
 gitIntegration: broadcom
 artIntegration: int_artifactory
