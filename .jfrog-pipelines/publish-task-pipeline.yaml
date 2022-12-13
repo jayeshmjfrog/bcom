@@ -19,9 +19,9 @@ pipelines:
         type: image
         image:
           custom:broadcom
-            name: releases-docker.jfrog.io/jfrog/pipelines-u18node
-            tag: "16"
-            autoPull: true
+            - name: releases-docker.jfrog.io/jfrog/pipelines-u18node
+              tag: "16"
+              autoPull: true
       environmentVariables:
         readOnly:
           TASK_NAME: hello-world
