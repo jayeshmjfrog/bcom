@@ -1,16 +1,17 @@
 pipelines:
   - name: Run_Description_Feature
     steps: 
-      - name: Set_Run_Description
+      - name: Set_Run_Name
         type: Bash
         execution:
           onStart:
+            - set_run_name "build-${run_id}"
             - update_run_description 'build started'
       - name: Update_Run_Description
         type: Bash
         configuration:
           inputSteps:
-            - name: Set_Run_Description
+            - name: Set_Run_Name
         execution:
           onExecute:
             - echo 'Build is in progress'
