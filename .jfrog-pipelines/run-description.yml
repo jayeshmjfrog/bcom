@@ -10,7 +10,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: Set_Run_Name
+            - name: Set_Run_Description
         execution:
           onExecute:
             - echo 'Build is in progress'
