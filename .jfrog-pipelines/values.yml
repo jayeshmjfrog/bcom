@@ -1,5 +1,5 @@
 repoPath: jayeshmjfrog/broadcom
 mainBranch: main
-gitIntegration: broadcom
-artIntegration: int_artifactory
+gitIntegration: JMGit
+artIntegration: art
 windowsNodePool:
