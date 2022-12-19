@@ -1,0 +1,22 @@
+pipelines:
+  - name: Run_Description_Feature
+    steps: 
+      - name: Set_Run_Name
+        execution:
+          onStart:
+            - update_run_description 'build started'
+          onExecute:
+            - echo 'Setting run name'
+            - set_run_name "build-${run_id}"
+      - name: Update_Run_Description
+        configuration:
+          inputSteps:
+            - name: Set_Run_Name
+        execution:
+          onExecute:
+            - echo 'Build is in progress'
+            - update_run_description 'build in progress'
+            - sleep 15s
+          onComplete:
+            - echo 'Updating run description'
+            - update_run_description 'Build is completed'
